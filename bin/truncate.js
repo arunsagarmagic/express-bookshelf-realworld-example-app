@@ -3,14 +3,17 @@
 /* eslint-disable no-console */
 
 const truncate = require('../db/truncate');
-const {knex} = require('../db/connection');
+const { knex } = require('../db/connection');
 
-(async () => {
-  try {
-    await truncate(knex);
-    process.exit();
-  } catch (error) {
-    console.error(error);
-    process.exit(1);
-  }
+(async () =>
+{
+	try
+	{
+		await truncate(knex);
+		process.exit();
+	} catch (error)
+	{
+		console.error(error);
+		process.exit(1);
+	}
 })();
